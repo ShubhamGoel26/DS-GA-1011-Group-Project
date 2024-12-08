@@ -15,10 +15,6 @@ This project investigates the trade-offs between accuracy and computational effi
 - [Evaluation](#evaluation)
 - [Results](#results)
 - [Future Work](#future-work)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
