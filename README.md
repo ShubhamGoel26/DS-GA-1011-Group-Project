@@ -1,65 +1,68 @@
+
 # From BERT to Mamba: Evaluating Deep Learning for Efficient QA Systems
 
-This project investigates the trade-offs between accuracy and computational efficiency in deep learning models for Question Answering (QA) tasks. We evaluate models such as BERT, T5, LSTM, and Mamba on their ability to deliver precise answers while balancing computational resource requirements. Our findings provide insights into optimizing QA systems for real-world applications.
+This repository contains the implementation and results of our project, **"From BERT to Mamba: Evaluating Deep Learning for Efficient QA Systems"**, which explores the trade-offs between accuracy and computational efficiency in question-answering (QA) systems. Our work compares several deep learning models, including BERT, T5, LSTM, and Mamba, focusing on their performance on the SQuAD 2.0 dataset.
 
 ## Table of Contents
-
-- [Abstract](#abstract)
 - [Introduction](#introduction)
 - [Models Evaluated](#models-evaluated)
-  - [BERT](#bert)
-  - [T5](#t5)
-  - [LSTM](#lstm)
-  - [Mamba](#mamba)
 - [Dataset](#dataset)
-- [Evaluation](#evaluation)
+- [Evaluation Metrics](#evaluation-metrics)
 - [Results](#results)
 - [Future Work](#future-work)
 
 ---
 
-## Abstract
-
-This project compares multiple models for QA tasks, focusing on balancing accuracy with computational efficiency. We fine-tune and evaluate models like BERT, T5, and Mamba using Exact Match scores and resource usage, offering insights for practical deployment.
-
 ## Introduction
 
-Modern QA tasks demand models capable of interpreting queries and extracting precise answers from large contexts. While transformer-based models like BERT and T5 have achieved state-of-the-art results, their computational costs often limit their scalability. This project explores efficient alternatives such as Mamba, alongside traditional LSTM-based models, comparing their trade-offs between performance and efficiency.
+Question Answering (QA) and Machine Reading Comprehension are fundamental NLP tasks that involve interpreting user queries and extracting relevant information from text. Our work compares the following models:
+
+1. **BERT**: A transformer-based model with state-of-the-art performance but high computational costs.
+2. **T5**: A versatile text-to-text transformer model.
+3. **LSTM**: A traditional RNN-based approach, incorporating attention mechanisms for improved context understanding.
+4. **Mamba**: A state-space model (SSM) designed for efficient processing of long sequences.
+
+Through rigorous evaluation, we analyze the trade-offs in accuracy and computational efficiency, focusing on metrics such as Exact Match (EM) scores.
+
+---
 
 ## Models Evaluated
 
-### BERT
-- **Variant Used:** `bert-base-uncased` from Hugging Face.
-- **Key Features:** Transformer-based, bidirectional attention.
-- **Fine-Tuning Details:** Pretrained on the SQuAD dataset with a focus on optimizing answer span prediction.
+### BERT Model
+- **Architecture**: Transformer-based with bidirectional attention.
+- **Pretraining/Fine-tuning**: Fine-tuned on the SQuAD 2.0 dataset.
+- **Evaluation**: Demonstrates high accuracy but requires significant memory.
 
-### T5
-- **Variant Used:** `T5-base` from Hugging Face.
-- **Key Features:** Text-to-text framework, flexible for various NLP tasks.
-- **Fine-Tuning Details:** Fine-tuned on SQuAD with specialized tokenizers and performance tracking.
+### T5 Model
+- **Architecture**: Text-to-text transformer model.
+- **Pretraining/Fine-tuning**: Fine-tuned for QA tasks with structured input and output.
+- **Evaluation**: Balances accuracy and versatility, with longer training times.
 
-### LSTM
-- **Key Features:** Sequential processing with attention mechanisms.
-- **Architecture:** Embedding layers, bidirectional LSTMs, and dense layers for answer span prediction.
-- **Challenges:** High training time and limited generalization on complex datasets.
+### LSTM-Based Model
+- **Architecture**: RNN with bidirectional LSTM layers and attention mechanisms.
+- **Pretraining/Fine-tuning**: Trained on a subset of SQuAD 2.0 due to resource constraints.
+- **Evaluation**: Low accuracy compared to transformer-based models.
 
-### Mamba
-- **Variant Used:** `state-spaces/mamba-130m`.
-- **Key Features:** Efficient handling of long sequences with linear scaling.
-- **Fine-Tuning Details:** Fine-tuned on SQuAD v2.0, demonstrating the model’s capability for efficient QA tasks.
+### Mamba Model
+- **Architecture**: State-space model (SSM) with linear scaling, optimized for long sequences.
+- **Pretraining/Fine-tuning**: Fine-tuned for QA with synthetic negative examples for unanswerable questions.
+- **Evaluation**: Efficient but limited in semantic reasoning.
+
+---
 
 ## Dataset
 
-We use the **SQuAD 2.0** dataset, a benchmark for QA tasks. It includes:
-- Over 100k answerable questions.
-- 50k unanswerable questions requiring models to differentiate between answerable and unanswerable queries.
+We use the **SQuAD 2.0** dataset, a benchmark in QA tasks. It includes:
+- 100,000 answerable questions with associated context.
+- 50,000 unanswerable questions to test the model's ability to identify insufficient information.
 
-The dataset can be downloaded from the [SQuAD Explorer](https://rajpurkar.github.io/SQuAD-explorer/).
+---
 
-## Evaluation
+## Evaluation Metrics
 
-- **Metric:** Exact Match (EM) score, assessing the percentage of predicted answers that exactly match ground-truth answers.
-- **Setup:** Models were trained and evaluated under standardized conditions for fair comparison.
+We use the **Exact Match (EM)** score, a strict metric that calculates the percentage of predictions that exactly match the ground-truth answers, including punctuation and whitespace.
+
+---
 
 ## Results
 
@@ -70,8 +73,13 @@ The dataset can be downloaded from the [SQuAD Explorer](https://rajpurkar.github
 | LSTM    | 0.093            |
 | Mamba   | 0.12             |
 
+BERT and T5 outperform other models, while Mamba struggles with semantic reasoning, highlighting the limitations of its architecture for QA tasks.
+
+---
+
 ## Future Work
 
-- **BERT and T5:** Enhance performance through hyperparameter tuning, additional epochs, and regularization techniques.
-- **LSTM:** Improve generalization with pre-trained embeddings and advanced attention mechanisms.
-- **Mamba:** Test on diverse datasets like Natural Questions or TriviaQA to refine its span-based QA capabilities.
+- **BERT**: Extend training with advanced learning rate schedules and incorporate into ensemble models.
+- **T5**: Optimize hyperparameters, apply regularization, and explore lightweight techniques like LoRA and pruning.
+- **LSTM**: Enhance architecture with pre-trained embeddings and self-attention mechanisms.
+- **Mamba**: Experiment with task-specific pretraining and integrate self-attention for improved context modeling.
