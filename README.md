@@ -10,6 +10,7 @@ This repository contains the implementation and results of our project, **"From 
 - [Evaluation Metrics](#evaluation-metrics)
 - [Results](#results)
 - [Future Work](#future-work)
+- [References](#references)
 
 ---
 
@@ -83,3 +84,13 @@ BERT and T5 outperform other models, while Mamba struggles with semantic reasoni
 - **T5**: Optimize hyperparameters, apply regularization, and explore lightweight techniques like LoRA and pruning.
 - **LSTM**: Enhance architecture with pre-trained embeddings and self-attention mechanisms.
 - **Mamba**: Experiment with task-specific pretraining and integrate self-attention for improved context modeling.
+
+---
+
+## References
+
+1. Rajpurkar, P., Jia, R., & Liang, P. (2018). *Know What You Don’t Know: Unanswerable Questions for SQuAD*. Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers), 784–789. [[Paper Link](https://aclanthology.org/P18-2124/)]
+2. Hochreiter, S., & Schmidhuber, J. (1997). *Long Short-Term Memory*. Neural Computation. [[Paper Link](https://www.bioinf.jku.at/publications/older/2604.pdf)]
+3. Devlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2018). *BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding*. arXiv preprint arXiv:1810.04805. [[Paper Link](https://arxiv.org/abs/1810.04805)]
+4. Raffel, C., Shazeer, N., Roberts, A., et al. (2020). *Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer*. Journal of Machine Learning Research. [[Paper Link](https://arxiv.org/abs/1910.10683)]
+5. Gu, A., & Dao, T. (2023). *Mamba: Linear-time sequence modeling with selective state spaces*. arXiv preprint arXiv:2312.00752. [[Paper Link](https://arxiv.org/abs/2312.00752)]
