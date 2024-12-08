@@ -17,7 +17,6 @@ This repository demonstrates a complete pipeline for **fine-tuning the T5-base m
 2. [Setup](#setup)
 3. [Usage](#usage)
 4. [Results](#results)
-5. [References](#references)
 
 ---
 
@@ -71,10 +70,4 @@ Run the following script to start fine-tuning with LoRA and post-training quanti
 | T5-base + LoRA       | Slightly Worse     | ~900 MB    | Efficient fine-tuning  |
 | T5-base + Quantization (INT8)| Slightly Worse     | ~212 MB    | Efficient fine-tuning  |
 | T5-base + QLoRA      | Slightly Worse             | ~300 MB    | Memory-efficient       |
-
-## References
-[^1]: [T5](https://arxiv.org/abs/1910.10683)
-[^2]: [LoRA](https://arxiv.org/abs/2106.09685)
-[^3]: [Quantization](https://arxiv.org/abs/1906.00532)
-[^4]: [QLoRA](https://neurips.cc/virtual/2023/poster/71815)
 
