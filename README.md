@@ -36,8 +36,8 @@ Through rigorous evaluation, we analyze the trade-offs in accuracy and computati
 
 ### T5 Model
 - **Architecture**: Text-to-text transformer model.
-- **Pretraining/Fine-tuning**: Fine-tuned for QA tasks with structured input and output.
-- **Evaluation**: Balances accuracy and versatility, with longer training times.
+- **Pretraining/Fine-tuning**: Fine-tuned for QA tasks with structured input and output. Used LoRA, Quantization and QLoRA for efficient fine-tuning.
+- **Evaluation**: Balances accuracy and versatility, with longer training times. More efficient in case of LoRA, Quantization and QLoRA.
 
 ### LSTM-Based Model
 - **Architecture**: RNN with bidirectional LSTM layers and attention mechanisms.
@@ -74,16 +74,14 @@ We use the **Exact Match (EM)** score, a strict metric that calculates the perce
 | LSTM    | 0.093            |
 | Mamba   | 0.12             |
 
+| Configuration        | Validation Loss    | Model Size | Performance            |
+|-----------------------|--------------------|------------|------------------------|
+| T5-base (FP32)       | Baseline           | ~850 MB    | Accurate but large     |
+| T5-base + LoRA       | Slightly Worse     | ~900 MB    | Efficient fine-tuning  |
+| T5-base + Quantization (INT8)| Slightly Worse     | ~212 MB    | Efficient fine-tuning  |
+| T5-base + QLoRA      | Slightly Worse             | ~300 MB    | Memory-efficient       |
+
 BERT and T5 outperform other models, while Mamba struggles with semantic reasoning, highlighting the limitations of its architecture for QA tasks.
-
----
-
-## Future Work
-
-- **BERT**: Extend training with advanced learning rate schedules and incorporate into ensemble models.
-- **T5**: Optimize hyperparameters, apply regularization, and explore lightweight techniques like LoRA and pruning.
-- **LSTM**: Enhance architecture with pre-trained embeddings and self-attention mechanisms.
-- **Mamba**: Experiment with task-specific pretraining and integrate self-attention for improved context modeling.
 
 ---
 
@@ -94,3 +92,6 @@ BERT and T5 outperform other models, while Mamba struggles with semantic reasoni
 3. Devlin, J., Chang, M.-W., Lee, K., & Toutanova, K. (2018). *BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding*. arXiv preprint arXiv:1810.04805. [[Paper Link](https://arxiv.org/abs/1810.04805)]
 4. Raffel, C., Shazeer, N., Roberts, A., et al. (2020). *Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer*. Journal of Machine Learning Research. [[Paper Link](https://arxiv.org/abs/1910.10683)]
 5. Gu, A., & Dao, T. (2023). *Mamba: Linear-time sequence modeling with selective state spaces*. arXiv preprint arXiv:2312.00752. [[Paper Link](https://arxiv.org/abs/2312.00752)]
+6. Edward J. Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean Wang, Lu Wang, Weizhu Chen. *LoRA: Low-Rank Adaptation of Large Language Models*[[Paper Link](https://arxiv.org/abs/2106.09685)]
+7. Aishwarya Bhandare, Vamsi Sripathi, Deepthi Karkada, Vivek Menon, Sun Choi, Kushal Datta, Vikram Saletore. *Efficient 8-Bit Quantization of Transformer Neural Machine Language Translation Model*[[Paper Link](https://arxiv.org/abs/1906.00532)]
+8. Tim Dettmers · Artidoro Pagnoni · Ari Holtzman · Luke Zettlemoyer. *QLoRA: Efficient Finetuning of Quantized LLMs*[[Paper Link](https://neurips.cc/virtual/2023/poster/71815))]
