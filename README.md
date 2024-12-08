@@ -46,7 +46,7 @@ Modern QA tasks demand models capable of interpreting queries and extracting pre
 ### Mamba
 - **Variant Used:** `state-spaces/mamba-130m`.
 - **Key Features:** Efficient handling of long sequences with linear scaling.
-- **Fine-Tuning Details:** Fine-tuned on SQuAD v2.0 using an adapted script for training and evaluation.
+- **Fine-Tuning Details:** Fine-tuned on SQuAD v2.0, demonstrating the model’s capability for efficient QA tasks.
 
 ## Dataset
 
