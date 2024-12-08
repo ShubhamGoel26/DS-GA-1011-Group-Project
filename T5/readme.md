@@ -58,15 +58,13 @@ The code uses t5-base from Hugging Face as the base model.
 
 Run the following script to start fine-tuning with LoRA and post-training quantization:
 
-```bash
-   python train.py // For normal T5 base training 
-
-   python train_lora.py // For normal T5 base training with LoRA
-
-   python train_quant.py // For normal T5 base training with Post Training Quantization 
-
-   python train_qlora.py // For normal T5 base training with QLoRA```
-
+  ```bash
+  python train.py // For normal T5 base training 
+  python train_lora.py // For normal T5 base training with LoRA
+  python train_quant.py // For normal T5 base training with Post Training Quantization 
+  python train_qlora.py // For normal T5 base training with QLoRA
+  ```
+## Results
 
 | Configuration        | Validation Loss    | Model Size | Performance            |
 |-----------------------|--------------------|------------|------------------------|
