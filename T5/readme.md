@@ -65,7 +65,7 @@ Run the following script to start fine-tuning with LoRA and post-training quanti
 
    python train_quant.py // For normal T5 base training with Post Training Quantization 
 
-   python train_qlora.py // For normal T5 base training with QLoRA
+   python train_qlora.py // For normal T5 base training with QLoRA```
 
 
 | Configuration        | Validation Loss    | Model Size | Performance            |
