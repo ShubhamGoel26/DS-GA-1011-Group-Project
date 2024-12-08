@@ -24,9 +24,7 @@ This project investigates the trade-offs between accuracy and computational effi
 
 ## Abstract
 
-This project compares multiple models for QA tasks, focusing on balancing accuracy with computational efficiency. We fine-tune and evaluate models like BERT, T5, and Mamba using Exact Match scores and resource usage, offering insights for practical deployment. 
-
-The code is available at: [GitHub Repository](https://github.com/eliguo/DS-GA-1011-Group-Project).
+This project compares multiple models for QA tasks, focusing on balancing accuracy with computational efficiency. We fine-tune and evaluate models like BERT, T5, and Mamba using Exact Match scores and resource usage, offering insights for practical deployment.
 
 ## Introduction
 
@@ -52,13 +50,15 @@ Modern QA tasks demand models capable of interpreting queries and extracting pre
 ### Mamba
 - **Variant Used:** `state-spaces/mamba-130m`.
 - **Key Features:** Efficient handling of long sequences with linear scaling.
-- **Fine-Tuning Details:** Fine-tuned on SQuAD v2.0 using an adapted script from [Oxen.ai](https://github.com/Oxen-AI/mamba-dive).
+- **Fine-Tuning Details:** Fine-tuned on SQuAD v2.0 using an adapted script for training and evaluation.
 
 ## Dataset
 
 We use the **SQuAD 2.0** dataset, a benchmark for QA tasks. It includes:
 - Over 100k answerable questions.
 - 50k unanswerable questions requiring models to differentiate between answerable and unanswerable queries.
+
+The dataset can be downloaded from the [SQuAD Explorer](https://rajpurkar.github.io/SQuAD-explorer/).
 
 ## Evaluation
 
