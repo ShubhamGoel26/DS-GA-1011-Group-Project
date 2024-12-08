@@ -67,13 +67,6 @@ We use the **Exact Match (EM)** score, a strict metric that calculates the perce
 
 ## Results
 
-| Model   | Exact Match Score |
-|---------|-------------------|
-| BERT    | 0.64             |
-| T5      | 0.68             |
-| LSTM    | 0.093            |
-| Mamba   | 0.12             |
-
 | Configuration        | Validation Loss    | Model Size | Performance            |
 |-----------------------|--------------------|------------|------------------------|
 | T5-base (FP32)       | Baseline           | ~850 MB    | Accurate but large     |
