@@ -73,8 +73,8 @@ Run the following script to start fine-tuning with LoRA and post-training quanti
 | T5-base + QLoRA      | Slightly Worse             | ~300 MB    | Memory-efficient       |
 
 ## References
-[T5](https://arxiv.org/abs/1910.10683))
-[LoRA](https://arxiv.org/abs/2106.09685)
-[Quantization](https://arxiv.org/abs/1906.00532)
-[QLoRA](https://neurips.cc/virtual/2023/poster/71815))
+[^1]: [T5](https://arxiv.org/abs/1910.10683)
+[^2]: [LoRA](https://arxiv.org/abs/2106.09685)
+[^3]: [Quantization](https://arxiv.org/abs/1906.00532)
+[^4]: [QLoRA](https://neurips.cc/virtual/2023/poster/71815)
 
