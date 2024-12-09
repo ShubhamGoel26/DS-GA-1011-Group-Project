@@ -6,13 +6,14 @@ This repository contains experiments on fine-tuning and pruning the BERT model f
 
 - **`BERT_FINETUNE_QA.ipynb`**
   - This notebook fine-tunes the BERT-Base-Uncased model on the SQuAD dataset.
-  - The fine-tuned model is evaluated on Exact Match (EM) and F1 metrics.
+  - The fine-tuned model is evaluated on Exact Match (EM) score.
 
 - **`Static_Model_Pruning/`**
   - Contains experiments with Static Model Pruning (SMP) applied to a pre-trained BERT model.
   - Two main notebooks:
     - **`BERT_SMP.ipynb`**: Static Model Pruning without Knowledge Distillation.
-    - **`BERT_SMP_KD.ipynb`**: Static Model Pruning with Knowledge Distillation.
+    - **`BERT_SMP_KD.ipynb`**: Static Model Pruning with Knowledge Distillation. Link to the teacher model ([Teacher Model](https://drive.google.com/file/d/15zLGpdTrBlChjc_lYBJu3tln-YS1dzTW/view)
+
   - The results from these experiments are summarized in a table (see below).
 
 ## Summary of Results
