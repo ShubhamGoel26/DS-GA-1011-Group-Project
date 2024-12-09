@@ -69,7 +69,7 @@ We use the **Exact Match (EM)** score, a strict metric that calculates the perce
 
 ## BERT
 
-| **Configuration**                  |**Model Size** | **Performance**            |
+| **Configuration**                  |**Model Size (Parameters)** | **Performance**            |
 |-----------------------------------|----------------|------------|
 | BERT-Base                | ~110M          | Accurate but large         |
 | BERT-Base + Static Model Pruning     | ~85M           | Efficient fine-tuning      |
