@@ -67,6 +67,17 @@ We use the **Exact Match (EM)** score, a strict metric that calculates the perce
 
 ## Results
 
+# BERT
+
+| **Configuration**                 | **Validation Loss** | **Model Size** | **Performance**            |
+|-----------------------------------|---------------------|----------------|----------------------------|
+| BERT-Base (FP32)                  | Baseline            | ~110M          | Accurate but large         |
+| BERT-Base + Static Model Pruning  | Slightly Worse      | ~85M           | Efficient fine-tuning      |
+| BERT-Base + Knowledge Distillation (KD) | Slightly Worse | ~85M           | Efficient with high accuracy |
+| BERT-Base + Pruning + KD          | Slightly Worse      | ~85M           | Memory-efficient with best performance |
+
+# T5
+
 | Configuration        | Validation Loss    | Model Size | Performance            |
 |-----------------------|--------------------|------------|------------------------|
 | T5-base (FP32)       | Baseline           | ~850 MB    | Accurate but large     |
