@@ -1,6 +1,6 @@
 # BERT Fine-Tuning and Static Model Pruning
 
-This repository contains experiments on fine-tuning and pruning the BERT model for efficient Natural Language Processing (NLP). The work demonstrates the application of Static Model Pruning (SMP) with and without Knowledge Distillation (KD) to optimize the model's performance while reducing its size.
+This repository contains experiments on fine-tuning and pruning the BERT model for developing a Question Answering System. The work demonstrates the application of Static Model Pruning (SMP) with and without Knowledge Distillation (KD) to optimize the model's performance while reducing its size.
 
 ## Structure of the Repository
 
