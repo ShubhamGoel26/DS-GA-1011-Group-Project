@@ -66,7 +66,6 @@ We use the **Exact Match (EM)** score, a strict metric that calculates the perce
 ---
 
 ## Results
-
 ## BERT
 
 | **Configuration**                  |**Model Size (Parameters)** | **Performance**            |
@@ -86,6 +85,28 @@ We use the **Exact Match (EM)** score, a strict metric that calculates the perce
 | T5-base + QLoRA      | Slightly Worse             | ~300 MB    | Memory-efficient       |
 
 BERT and T5 outperform other models, while Mamba struggles with semantic reasoning, highlighting the limitations of its architecture for QA tasks.
+
+
+---
+
+## My Contributions
+Performed experiments with different LSTM-based architectures for span-based Question Answering (QA) tasks using the **SQuAD 2.0 dataset**. Various advanced techniques, such as pre-trained embeddings, attention mechanisms, and regularization, have been explored to improve performance.
+
+---
+
+## **Models Overview**
+
+| Feature                | Model\_1                 | Model\_2                 | Model\_3                 | Model\_4                 |
+|------------------------|--------------------------|--------------------------|--------------------------|--------------------------|
+| **Embeddings**         | Random                  | GloVe (pre-trained)      | FastText (pre-trained)   | FastText (pre-trained)   |
+| **Attention**          | Attention               | Attention               | Multi-Head Attention     | Self-Attention          |
+| **LSTM Configuration** | Bidirectional           | Bidirectional + Regularized | Bidirectional + Residual | Bidirectional + Residual |
+| **Pooling**            | Flatten                | Flatten                | GlobalMaxPooling1D       | GlobalMaxPooling1D       |
+| **Regularization**     | Dropout                | Dropout, L2            | Dropout, L2             | Dropout, L2             |
+| **Dataset Size**       | Training: 10,000 <br> Validation: 2,000 | Training: 20,000 <br> Validation: 5,000 | Training: 60,000 <br> Validation: 11,873 | Training: 60,000 <br> Validation: 11,873 |
+| **Model Parameters**   | ~499M                   | ~51M                    | ~36M                    | ~36M                    |
+| **Model Size**         | ~1.86GB                | ~195MB                 | ~138MB                 | ~138MB                 |
+| **Accuracy (EM)**      | Training: 0.094 <br> Validation: 0.008 | Training: 0.102 <br> Validation: 0.029 | Training: 0.071 <br> Validation: 0.116 | Training: 0.972 <br> Validation: 0.22 |
 
 ---
 
